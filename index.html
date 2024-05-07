@@ -87,19 +87,20 @@
             <li><a href="https://www.nature.com/subjects/bioinformatics" target="_blank" rel="noopener">Bioinfo Nature News</a></li>
         </ul>
     </div>
-
-    
 </div>
 
 <script>
-    // If you want to add JavaScript functionality, you can do it here
-    // For example, you could add functionality to open links in a new tab when clicked
-    const links = document.querySelectorAll('.link-list a');
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.open(link.href, '_blank');
-        });
+    // Function to generate a random gradient color
+    function getRandomGradient() {
+        const angle = Math.floor(Math.random() * 360);
+        const color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        const color2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        return `linear-gradient(${angle}deg, ${color1}, ${color2})`;
+    }
+
+    // Change background color on click
+    document.body.addEventListener('click', function() {
+        document.body.style.background = getRandomGradient();
     });
 </script>
 
