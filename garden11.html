@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Garden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #85FFBD, #FFFB7D);
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.613);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+
+        .category {
+            margin-bottom: 20px;
+        }
+
+        .category h2 {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 5px;
+            color: #000000;
+        }
+
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .link-list li {
+            margin-bottom: 5px;
+        }
+
+        .link-list li a {
+            text-decoration: none;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-list li a:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Links Garden</h1>
+
+    <div class="category">
+        <h2>Projects</h2>
+        <ul class="link-list">
+            <li><a href="https://octetbio.carrd.co/" target="_blank" rel="noopener">OctetBio Studio</a></li>
+            <li><a href="https://github.com/wassmi" target="_blank" rel="noopener">Github</a></li>
+            <li><a href="preprocess4nlp.streamlit.app" target="_blank" rel="noopener">Preprocess 4 NLP</a></li>
+        </ul>
+    </div>
+    
+    <div class="category">
+        <h2>News</h2>
+        <ul class="link-list">
+            <li><a href="https://www.nature.com/news" target="_blank" rel="noopener">Nature News</a></li>
+            <li><a href="https://thehackernews.com/" target="_blank" rel="noopener">Hackers News</a></li>
+            <li><a href="https://www.nature.com/nrdp/articles?type=Primer%2CPrime-View" target="_blank" rel="noopener">Disease Primer</a></li>
+            <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener">AI TechCrunch</a></li>
+            <li><a href="https://www.nature.com/subjects/bioinformatics" target="_blank" rel="noopener">Bioinfo Nature News</a></li>
+        </ul>
+    </div>
+
+    
+</div>
+
+<script>
+    // If you want to add JavaScript functionality, you can do it here
+    // For example, you could add functionality to open links in a new tab when clicked
+    const links = document.querySelectorAll('.link-list a');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open(link.href, '_blank');
+        });
+    });
+</script>
+
+</body>
+</html>
