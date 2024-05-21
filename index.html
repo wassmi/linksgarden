@@ -74,12 +74,17 @@
             <li><a href="https://octetbio.carrd.co/" target="_blank" rel="noopener">OctetBio Studio</a></li>
             <li><a href="https://github.com/wassmi" target="_blank" rel="noopener">Github</a></li>
             <li><a href="preprocess4nlp.streamlit.app" target="_blank" rel="noopener">Preprocess 4 NLP</a></li>
+            <li><a href="https://montmagny.streamlit.app/" target="_blank" rel="noopener">Montmagny</a></li>
+            <li><a href="https://github.com/monkeymanford/ai-dashboard" target="_blank" rel="noopener">AI dashboard</a></li>
+            <li><a href="https://github.com/monkeymanford/civision-db-tools" target="_blank" rel="noopener">cv db tools/a></li>
         </ul>
     </div>
     
     <div class="category">
         <h2>News</h2>
         <ul class="link-list">
+            
+            <li><a href="https://dev.to/ " target="_blank" rel="noopener">Dev.to</a></li>
             <li><a href="https://www.nature.com/news" target="_blank" rel="noopener">Nature News</a></li>
             <li><a href="https://thehackernews.com/" target="_blank" rel="noopener">Hackers News</a></li>
             <li><a href="https://www.nature.com/nrdp/articles?type=Primer%2CPrime-View" target="_blank" rel="noopener">Disease Primer</a></li>
@@ -87,20 +92,19 @@
             <li><a href="https://www.nature.com/subjects/bioinformatics" target="_blank" rel="noopener">Bioinfo Nature News</a></li>
         </ul>
     </div>
+
+    
 </div>
 
 <script>
-    // Function to generate a random gradient color
-    function getRandomGradient() {
-        const angle = Math.floor(Math.random() * 360);
-        const color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        const color2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        return `linear-gradient(${angle}deg, ${color1}, ${color2})`;
-    }
-
-    // Change background color on click
-    document.body.addEventListener('click', function() {
-        document.body.style.background = getRandomGradient();
+    // If you want to add JavaScript functionality, you can do it here
+    // For example, you could add functionality to open links in a new tab when clicked
+    const links = document.querySelectorAll('.link-list a');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open(link.href, '_blank');
+        });
     });
 </script>
 
